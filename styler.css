@@ -1,0 +1,298 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&family=Nunito+Sans:ital,wght@0,200;0,700;1,200;1,300&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,300;1,500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200&family=Raleway:wght@200;300;400;500&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,400&display=swap');
+
+:root{
+
+    --green: #0EB582;   
+
+    --black: #000000;
+
+    --light-color: #8E7B8C;
+
+    --border: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+*{
+    font-weight: 200;
+    font-family: 'Nunito',sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.5s linear;
+    border: 0;
+    outline: none;
+    color: #333;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+}
+/*common css */
+.fa-bars{
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 4rem;
+}
+.Menu{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0, 0, 0, 0.8);
+    top: 0;left:-100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-times{
+    color: #fff !important;
+    transition: .4s;
+}
+.Menu.active{
+    left: 0;
+}
+.Menu nav{
+    flex-flow: column;
+    gap: 5rem !important;
+}
+.Menu nav a{
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.fa-bars:hover,
+.fa-times:hover{
+    transform: rotate(360deg);
+}
+
+
+/*mở tag header */
+
+
+.header{
+    z-index: 100;
+    position: fixed;
+    background: #fff;
+    padding: 1.5rem 0;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.3rem;
+    border-bottom: var(--border);
+}
+.header .Menu nav{
+    display: flex;
+    gap: 2rem;
+
+}
+
+.header .logo .fa-lightbulb{
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: var(--green);
+}
+/* Đóng tag header */
+
+/* Mở tag image */
+
+.image{
+    padding-top: 4.6rem;
+}
+.image .image-content{
+    background: url('img/home-slide-1.jpg') no-repeat center center / cover;
+    padding: 10rem 10%;
+}
+
+.image .image-content .content{
+    width: 60%;
+}
+.image .image-content h1{
+    color: white;
+    font-size: 3.5rem;
+}
+.image .image-content p{
+    color: white;
+    line-height: 1.7;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+.btn{
+    color: var(--green);
+    background: #eee;
+    padding: 1rem 1.6rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: var(--border);
+}
+
+.btn:hover{
+    background: var(--green);
+    color: #fff;
+
+}
+/*Đóng tag image */
+
+/* Mở tag subject */
+.heading{
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.subject{
+    padding: 5rem 10%;
+}
+
+.subject .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.subject .container .item{
+    text-align: center;
+    border: var(--border);
+    flex: 1 1 5rem;
+    padding: 1rem;
+    background: #f0fdfa;
+}
+
+.subject .container .item:hover{
+    background: var(--green);
+}
+.subject .container .item:hover h3,
+.subject .container .item:hover p{
+    color: #fff;
+}
+
+.subject .container .item h3{
+    font-size: 1rem;
+    margin: 1.2rem 0;
+}
+
+.subject .container .item p{
+    color: var(--light-color);
+    font-size: 0.8rem;
+}
+/* Đóng tag subject */
+
+/* mở tag courses */
+
+.courses{
+    padding: 5rem 10%;
+}
+
+.courses .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.courses .container .item{
+    position: relative;
+    flex: 1 1 20rem;
+    background: #F0FDFA;
+    padding: 1rem;
+}
+.courses .container .item:hover .item-hover {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+.courses .container .item .item-image h2{
+    font-size: 1.5rem;
+    margin: 1.8rem 0;
+}
+
+.courses .container .item .item-image img{
+    width: 100%;
+}
+.courses .container .item .item-hover{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    background: var(--green);
+    padding: 1.5rem 1.6rem;
+}
+.courses .container .item .item-hover h2,
+.courses .container .item .item-hover p{
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.courses .container .item .item-hover .btn:hover{
+    color: #fff;
+    background: #000;
+}
+.footer{
+    padding: 5rem 10%;
+    background-color: #f0fdfa;
+}         
+.footer .container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .container .links i{
+    color: var(--green);
+}
+.footer .container .links span{
+    margin: 1rem 0;
+    font-size: .8rem;
+}
+.footer .container .icons{
+    display: flex;
+    gap: 1rem;
+}
+.footer .container .icons a span{
+   display: grid;
+    place-items: center;
+    background-color: var(--green);
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    color: #fff;
+    
+}
+.footer .container .icons a span:hover{
+    background-color: #000;
+}
+.footer .container .quick-link h3,
+.footer .container .useful-link h3{
+    margin-bottom: 1.5rem;
+}
+.footer .container .quick-link nav a,
+.footer .container .useful-link nav a{
+
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-transform: none !important;
+    color: var(--light-color);
+}
+.footer .container .quick-link nav a:hover,
+.footer .container .useful-link nav a:hover{
+    color: var(--green);
+    text-decoration: underline;
+}
+.footer .container .letter form{
+    display: grid;
+    gap: 1.5rem;
+}
+.footer .container .letter form input[type="email"]{
+    padding: 1.2rem 1rem;
+    border: 1px solid #333;
+}
+
+
